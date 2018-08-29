@@ -17,4 +17,3 @@ with open('C:\\IPs.txt') as f:
     for ip in f:
         out = socket.gethostbyaddr(ip)
         print (out[2],out[0])
-
