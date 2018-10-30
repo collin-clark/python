@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div class="jumbotron">
+  <div class="container">
+    <h2 class="display-8">Firewall</h2>
+    <p class="lead">Object and ACL Builder....</p>
+  </div>
+</div>	
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<form method="post" action="gen.cgi">
+<fieldset>
+
+<div class="container">	
+<div class="row">
+
+<!-- Source Network -->
+	<span class="border-right">
+		<div class="col">
+
+	<p class="text-primary">
+  <label class="control-label" for="src">Source Host/Network</label>  
+  
+  <input id="src" name="src" type="text" placeholder="" class="form-control input-md">
+    
+
+<!-- Source Subnet Mask -->
+
+  <label class="control-label" for="src_mask">Subnet Mask</label>
+  
+    <select id="src_mask" name="src_mask" class="form-control">
+      <option value="255.255.255.255">255.255.255.255 /32</option>
+      <option value="255.255.255.252">255.255.255.252 /30</option>
+      <option value="255.255.255.248">255.255.255.248 /29</option>
+      <option value="255.255.255.240">255.255.255.240 /28</option>
+      <option value="255.255.255.224">255.255.255.224 /27</option>
+      <option value="255.255.255.192">255.255.255.192 /26</option>
+      <option value="255.255.255.128">255.255.255.128 /25</option>
+      <option value="255.255.255.0">255.255.255.0 /24</option>
+      <option value="255.255.254.0">255.255.254.0 /23</option>
+      <option value="255.255.252.0">255.255.252.0 /22</option>
+      <option value="255.255.248.0">255.255.248.0 /21</option>
+      <option value="255.255.240.0">255.255.240.0 /20</option>
+      <option value="255.255.224.0">255.255.224.0 /19</option>
+      <option value="255.255.192.0">255.255.192.0 /18</option>
+      <option value="255.255.128.0">255.255.128.0 /17</option>
+      <option value="255.255.0.0">255.255.0.0 /16</option>
+      <option value="255.254.0.0">255.254.0.0 /15</option>
+      <option value="255.252.0.0">255.252.0.0 /14</option>
+      <option value="255.248.0.0">255.248.0.0 /13</option>
+      <option value="255.240.0.0">255.240.0.0 /12</option>
+      <option value="255.224.0.0">255.224.0.0 /11</option>
+      <option value="255.192.0.0">255.192.0.0 /10</option>
+      <option value="255.128.0.0">255.128.0.0 /9</option>
+      <option value="255.0.0.0">255.0.0.0 /8</option>
+    </select>
+
+<!-- Source Description -->
+ 
+  	<label class="control-label" for="src_desc">Description</label>
+    <input id="src_desc" name="src_desc" type="text" placeholder="" class="form-control input-md">
+
+</div>
+</p>
+</span>
+<br>
+<!-- Destination Network -->
+	<span class="border-right">
+		<div class="col">
+	<p class="text-success">
+  <label class="control-label" for="dst">Destination Host/Network</label>
+                      
+    <input id="dst" name="dst" type="text" placeholder="" class="form-control input-md">
+
+<!-- Destination Subnet Mask -->
+
+  <label class="control-label" for="dst_mask">Subnet Mask</label>
+
+    <select id="dst_mask" name="dst_mask" class="form-control">
+      <option value="255.255.255.255">255.255.255.255 /32</option>
+      <option value="255.255.255.252">255.255.255.252 /30</option>
+      <option value="255.255.255.248">255.255.255.248 /29</option>
+      <option value="255.255.255.240">255.255.255.240 /28</option>
+      <option value="255.255.255.224">255.255.255.224 /27</option>
+      <option value="255.255.255.192">255.255.255.192 /26</option>
+      <option value="255.255.255.128">255.255.255.128 /25</option>
+      <option value="255.255.255.0">255.255.255.0 /24</option>
+      <option value="255.255.254.0">255.255.254.0 /23</option>
+      <option value="255.255.252.0">255.255.252.0 /22</option>
+      <option value="255.255.248.0">255.255.248.0 /21</option>
+      <option value="255.255.240.0">255.255.240.0 /20</option>
+      <option value="255.255.224.0">255.255.224.0 /19</option>
+      <option value="255.255.192.0">255.255.192.0 /18</option>
+      <option value="255.255.128.0">255.255.128.0 /17</option>
+      <option value="255.255.0.0">255.255.0.0 /16</option>
+      <option value="255.254.0.0">255.254.0.0 /15</option>
+      <option value="255.252.0.0">255.252.0.0 /14</option>
+      <option value="255.248.0.0">255.248.0.0 /13</option>
+      <option value="255.240.0.0">255.240.0.0 /12</option>
+      <option value="255.224.0.0">255.224.0.0 /11</option>
+      <option value="255.192.0.0">255.192.0.0 /10</option>
+      <option value="255.128.0.0">255.128.0.0 /9</option>
+      <option value="255.0.0.0">255.0.0.0 /8</option>
+    </select>
+
+
+<!-- Destination Description -->
+
+  <label class="control-label" for="dst_desc">Description</label>  
+
+  <input id="dst_desc" name="dst_desc" type="text" placeholder="" class="form-control input-md">
+</p>
+<br>    
+  
+</div>
+</span>
+<!-- Port -->
+<div class="col-2">
+  <label class="control-label" for="port">Port</label>
+                     
+    <input id="port" name="port" type="text" placeholder="" class="form-control input-md">
+
+
+
+<!-- Protocol -->
+
+  <div class="radio">
+ 
+  	<legend class="col-form-label">Protocols</legend>
+
+  <label><input type="radio" name="protocol" value = "tcp" checked>TCP</label>
+</div>
+<div class="radio">
+  <label><input type="radio" name="protocol" value = "udp">UDP</label>
+</div>
+<div class="radio">
+  <label><input type="radio" name="protocol" value = "tcp-udp">TCP & UDP</label>
+</div>
+
+<!-- ACL Options -->
+
+	  
+  	<legend class="col-form-label">ACL Options</legend>
+  	
+  <div class="checkbox">
+    <label for="logging">
+      <input type="checkbox" name="logging" id="logging" value="logging">
+      logging
+    </label>
+	</div>
+
+  <div class="checkbox">
+    <label for="inactive">
+      <input type="checkbox" name="inactive" id="inactive" value="inactive">
+      inactive
+    </label>
+	</div>
+  
+
+ 
+<!-- Button -->
+
+<br>
+<button id="button" name="button" class="btn btn-success">GO</button>
+  
+</div>
+
+</fieldset>
+</form>
+
